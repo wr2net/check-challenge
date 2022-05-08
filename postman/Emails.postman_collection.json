@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "5b75a59a-f7d4-43f7-8846-aa9fb5687a42",
+		"name": "Emails",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/api/emails",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"api",
+						"emails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Mary Jane\",\n    \"email\": \"john.smith@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/api/emails",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"api",
+						"emails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/api/emails/john.smith@gmail.com",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"api",
+						"emails",
+						"john.smith@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Mary Jane {{$timestamp}}\",\n    \"email\": \"mary.jane@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/api/emails/3",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"api",
+						"emails",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Disable",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/api/emails/3/disable",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"api",
+						"emails",
+						"3",
+						"disable"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Enable",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/api/emails/3/enable",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"api",
+						"emails",
+						"3",
+						"enable"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/api/emails/3",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"api",
+						"emails",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
