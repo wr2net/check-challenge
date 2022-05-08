@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "48bab4e6-188c-43d6-ba07-6bb4cb272b0d",
+		"name": "Cakes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/api/cakes",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"api",
+						"cakes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Chocolate\",\n    \"weight\": 1.000,\n    \"price\": 19.90,\n    \"quantity\": 15\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/api/cakes",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"api",
+						"cakes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/api/cakes/4",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"api",
+						"cakes",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Chocolate {{$timestamp}}\",\n    \"weight\": 1.500,\n    \"price\": 58.90,\n    \"quantity\": 50\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/api/cakes/4",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"api",
+						"cakes",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Disable",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/api/cakes/4/disable",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"api",
+						"cakes",
+						"4",
+						"disable"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Enable",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/api/cakes/4/enable",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"api",
+						"cakes",
+						"4",
+						"enable"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/api/cakes/4",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"api",
+						"cakes",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

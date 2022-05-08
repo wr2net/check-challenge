@@ -1,0 +1,33 @@
+version: '3.9'
+
+services:
+  check-database:
+    image: mysql:8
+    command: --default-authentication-plugin=mysql_native_password
+    container_name: check-database
+    restart: always
+    tty: true
+    volumes:
+      - "./mysql/:/var/lib/mysql"
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: ''
+      MYSQL_RANDOM_ROOT_PASSWORD: ''
+      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_DATABASE: 'check'
+    ports:
+      - "3306:3306"
+
+  check-backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: check-backend
+    working_dir: /var/www/
+    restart: always
+    tty: true
+    ports:
+      - "8099:8000"
+    volumes:
+      - "./backend/:/var/www/"
+    depends_on:
+      - check-database

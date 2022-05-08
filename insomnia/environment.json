@@ -1,0 +1,4 @@
+{
+  "server": "http://localhost:8099",
+  "timestemp": "{% now 'iso-8601', '' %}"
+}
